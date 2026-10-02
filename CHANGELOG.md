@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.0](https://github.com/ahincho/nova-java-27-cqrs/compare/v0.1.0...v1.0.0) (2026-10-02)
+
+
+### Documentation
+
+* mark the API as stable now that the orders use it ([59f21e5](https://github.com/ahincho/nova-java-27-cqrs/commit/59f21e525f60fedd797220640ac8a2d23fa6599f))
+
 ## 0.1.0 (2026-10-02)
 
 
