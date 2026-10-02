@@ -18,14 +18,14 @@ y la forma del repositorio —un contrato y sus implementaciones juntos, con una
 
 Los dos se publican en `https://maven.pkg.github.com/ahincho/nova-java-27-cqrs` con la misma versión.
 
-## La primera versión es la 0.1.0
+## Desde la 1.0.0, la API es estable
 
-La API todavía no tiene consumidor. La valida el servicio de pedidos de Plaza al migrar al bus, y la
-1.0.0 llega entonces; con ella, el starter entra en el meta-starter de Nova (ADR-052). Hasta ahí la
-capacidad se queda en 0.x, y un cambio de la API puede romper.
-
-`.release-please-config.json` fija `initial-version` en `0.1.0` y el manifest parte de `0.0.0`: el primer
-release sale como 0.1.0. Para salir de 0.x, un commit con el pie `Release-As: 1.0.0`.
+La 0.1.0 salió sin consumidor. La validó el servicio de pedidos de Plaza
+([`nova-plaza-03-spring-boot-orders`](https://github.com/ahincho/nova-plaza-03-spring-boot-orders)), que
+ejecuta su compra y sus dos consultas por los buses, y con eso la capacidad pasó a la 1.0.0. Desde aquí
+un cambio incompatible de la API, o del orden de los comportamientos, es una versión mayor. Con la 1.0.0
+el starter cumple la condición de ADR-052 para entrar en el meta-starter de Nova: sin un handler, los
+buses no hacen nada.
 
 ## Cómo se usa
 
@@ -173,7 +173,7 @@ repositories {
 }
 
 dependencies {
-    implementation("pe.edu.nova.java.starters:nova-cqrs-spring-boot-starter:0.1.0")
+    implementation("pe.edu.nova.java.starters:nova-cqrs-spring-boot-starter:1.0.0")
 }
 ```
 
